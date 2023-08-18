@@ -4,9 +4,9 @@ pipeline {
     choice (name: 'chooseNode', choices: ['Green', 'Blue'], description: 'Choose which Environment to Deploy: ')
   }
   environment {
-    listenerARN = 'arn:aws:elasticloadbalancing:ap-south-1:745825563476:listener/app/blue-green/a201cfaa8896efbc/42dd93cfc6ceb733'
-    blueARN = 'arn:aws:elasticloadbalancing:ap-south-1:745825563476:targetgroup/blue/2e98c824a11a99c8'
-    greenARN = 'arn:aws:elasticloadbalancing:ap-south-1:745825563476:targetgroup/Green/1aa96e9ddb6bd5c5'
+    listenerARN = 'arn:aws:elasticloadbalancing:us-east-1:027411030380:listener/app/myALB/f30442dbf18c6e52/12ed39e484465afd'
+    blueARN = 'arn:aws:elasticloadbalancing:us-east-1:027411030380:targetgroup/blue/7d9b18d4bac64dbc'
+    greenARN = 'arn:aws:elasticloadbalancing:us-east-1:027411030380:targetgroup/green/1edfd9ae854ec245'
   }
   stages {
     stage('Deployment Started') {
